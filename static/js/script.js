@@ -3,7 +3,7 @@ function goToBalloons() {
     window.location.href = "/balloons";
 }
 
-// Generate normal balloons (no heart shape)
+// Generate normal balloons with thread
 function generateNormalBalloons() {
     let container = document.getElementById("balloon-container");
 
@@ -20,15 +20,12 @@ function generateNormalBalloons() {
     }, 10000);
 }
 
-// Make the man walk and redirect to /quotes
-function startScene() {
-    generateNormalBalloons();
-    setTimeout(() => {
-        let man = document.getElementById("man-container");
-        man.style.animation = "walk 5s linear forwards";
-
-        setTimeout(() => {
-            window.location.href = "/quotes";
-        }, 5000);
-    }, 3000);
-}
+// Ensure scrolling emoji only appears once
+document.addEventListener("DOMContentLoaded", function () {
+    if (!document.getElementById("scrolling-emoji")) {
+        let emojiContainer = document.createElement("div");
+        emojiContainer.id = "scrolling-emoji";
+        emojiContainer.innerHTML = "🎈✨💖"; // You can change emojis here
+        document.body.appendChild(emojiContainer);
+    }
+});
