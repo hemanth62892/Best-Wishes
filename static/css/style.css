@@ -36,6 +36,8 @@
     font-weight: bold;
     font-size: 18px;
     transform: rotate(45deg);
+    text-align: center;
+    width: 80px;
 }
 
 #heart-balloon-container {
@@ -53,7 +55,27 @@
     height: 40px;
     background: red;
     border-radius: 50%;
-    animation: float 5s ease-in-out infinite;
+    transform: rotate(-45deg);
+}
+
+/* Heart shape effect */
+.balloon::before, .balloon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+}
+
+.balloon::before {
+    top: -15px;
+    left: 0;
+}
+
+.balloon::after {
+    left: 15px;
+    top: 0;
 }
 
 @keyframes float {
@@ -95,4 +117,11 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
+.stethoscope {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+}
+
 
