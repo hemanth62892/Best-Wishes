@@ -1,6 +1,12 @@
+// Fix redirection from index to balloons
+function goToBalloons() {
+    window.location.href = "/balloons";
+}
+
+// Fix redirection from balloons to wishes
 function generateHeartBalloons() {
     let container = document.getElementById("heart-balloon-container");
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 15; i++) {
         let balloon = document.createElement("div");
         balloon.classList.add("balloon");
         balloon.style.left = (Math.sin(i) * 50 + 50) + "vw"; 
@@ -12,6 +18,7 @@ function generateHeartBalloons() {
     }, 5000);
 }
 
+// Fix redirection from wishes to quotes after man walks
 function startScene() {
     generateBalloons();
     setTimeout(() => {
@@ -21,4 +28,3 @@ function startScene() {
         }, 5000);
     }, 3000);
 }
-
