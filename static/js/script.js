@@ -1,22 +1,24 @@
-function goToBalloons() {
-    window.location.href = "/balloons";
-}
-
-function showMessage() {
-    generateBalloons();
+function generateHeartBalloons() {
+    let container = document.getElementById("heart-balloon-container");
+    for (let i = 0; i < 20; i++) {
+        let balloon = document.createElement("div");
+        balloon.classList.add("balloon");
+        balloon.style.left = (Math.sin(i) * 50 + 50) + "vw"; 
+        balloon.style.top = (Math.cos(i) * 50 + 50) + "vh"; 
+        container.appendChild(balloon);
+    }
     setTimeout(() => {
         window.location.href = "/wishes";
     }, 5000);
 }
 
-function generateBalloons() {
-    let container = document.getElementById("balloon-container");
-    for (let i = 0; i < 20; i++) {
-        let balloon = document.createElement("div");
-        balloon.classList.add("balloon");
-        balloon.style.left = Math.random() * 100 + "vw";
-        balloon.style.animationDuration = (Math.random() * 3 + 2) + "s";
-        balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`; // Random colors
-        container.appendChild(balloon);
-    }
+function startScene() {
+    generateBalloons();
+    setTimeout(() => {
+        document.getElementById("man-container").style.animation = "walk 5s linear forwards";
+        setTimeout(() => {
+            window.location.href = "/quotes";
+        }, 5000);
+    }, 3000);
 }
+
