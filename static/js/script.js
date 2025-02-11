@@ -45,3 +45,18 @@ function startScene() {
         }, 5000);
     }, 3000);
 }
+
+// Redirect from heart to balloons page
+function goToBalloons() {
+    window.location.href = "/balloons";
+}
+
+// Scroll emoji once, then redirect to /quotes
+function startEmojiScroll() {
+    let emoji = document.getElementById("scrolling-emoji");
+    
+    // After 5 seconds (when animation completes), redirect
+    setTimeout(() => {
+        window.location.href = "/quotes";
+    }, 5000);
+}
