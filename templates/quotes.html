@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Life Quotes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div class="quote-container">
+        <h2>"Life is beautiful with you!"</h2>
+        <h3>"Love is the heartbeat of the soul ❤️"</h3>
+    </div>
+    <img src="{{ url_for('static', filename='images/stethoscope.png') }}" class="stethoscope">
+    <audio autoplay>
+        <source src="{{ url_for('static', filename='sounds/heart_sound.mp3') }}" type="audio/mp3">
+    </audio>
+</body>
+</html>
