@@ -1,1 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wishes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div class="man"></div>
+    <h1>Wishing you all the happiness in the world! ❤️</h1>
+    <audio autoplay>
+        <source src="{{ url_for('static', filename='sounds/heart_bear.mp3') }}" type="audio/mp3">
+    </audio>
+</body>
+</html>
 
