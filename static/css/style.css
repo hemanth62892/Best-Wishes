@@ -36,17 +36,6 @@ body {
     border-radius: 50%;
 }
 
-/* Valentine's text */
-.valentine-text {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
 .heart-shape::before {
     top: -60px;
     left: 0;
@@ -77,13 +66,23 @@ body {
     content: "";
     position: absolute;
     width: 2px;
-    height: 50px;
+    height: 60px;
     background: white;
     left: 50%;
-    bottom: -50px;
+    bottom: -60px;
 }
 
-/* ---- WISHES PAGE (Fixed Scrolling Emoji) ---- */
+/* Valentine's text */
+.valentine-text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+/* ---- WISHES PAGE (Scrolling Emoji Appears Only Here) ---- */
 @keyframes scroll-emoji {
     0% { left: -100px; }
     100% { left: 100vw; }
