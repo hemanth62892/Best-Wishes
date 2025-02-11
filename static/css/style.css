@@ -1,8 +1,4 @@
-body {
-    text-align: center;
-    background-color: pink;
-}
-
+/* Red Curtain Background */
 .curtain {
     background: red;
     height: 100vh;
@@ -11,13 +7,43 @@ body {
     align-items: center;
 }
 
-.heart {
-    font-size: 24px;
-    color: white;
+/* Heart Shape */
+.heart-shape {
+    position: relative;
+    width: 100px;
+    height: 100px;
     background: pink;
-    padding: 20px;
-    border-radius: 50%;
+    transform: rotate(-45deg);
+    margin: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Create the two circles on top */
+.heart-shape::before,
+.heart-shape::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border-radius: 50%;
+}
+
+.heart-shape::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart-shape::after {
+    left: 50px;
+    top: 0;
 }
 
 #balloon-container {
@@ -27,36 +53,29 @@ body {
     overflow: hidden;
 }
 
+/* Balloon Style */
 .balloon {
     position: absolute;
     width: 50px;
     height: 70px;
     background: red;
     border-radius: 50%;
-    animation: float 3s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
-@keyframes float {
-    0% { transform: translateY(100vh); }
-    100% { transform: translateY(-10vh); }
-}
-
-.man {
-    width: 50px;
-    height: 100px;
-    background: url('../images/man.png') no-repeat center center/contain;
+/* String for Balloon */
+.balloon::after {
+    content: "";
     position: absolute;
-    animation: walk 5s linear forwards;
+    width: 2px;
+    height: 50px;
+    background: black;
+    left: 50%;
+    top: 70px;
 }
 
-@keyframes walk {
-    from { right: -100px; }
-    to { left: 100%; }
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
 }
-
-.stethoscope {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-}
-
