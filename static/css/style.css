@@ -14,7 +14,7 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 /* ---- HOME PAGE (Heart Shape) ---- */
@@ -59,17 +59,28 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translateY(100vh); opacity: 1; }
-    100% { transform: translateY(-10vh); opacity: 0; }
+    0% { transform: translateY(100vh) translateX(0); opacity: 1; }
+    100% { transform: translateY(-10vh) translateX(calc(50px - 100px * random())); opacity: 0; }
 }
 
 .balloon {
     position: absolute;
-    width: 80px; /* Bigger Balloons */
-    height: 100px;
-    background: red;
+    width: 60px; /* Bigger Balloons */
+    height: 80px;
     border-radius: 50%;
     animation: float 10s linear infinite;
+}
+
+/* Different Colors for Balloons */
+.balloon:nth-child(1) { background: red; }
+.balloon:nth-child(2) { background: blue; }
+.balloon:nth-child(3) { background: yellow; }
+.balloon:nth-child(4) { background: green; }
+.balloon:nth-child(5) { background: purple; }
+
+/* Add random positioning */
+.balloon {
+    left: calc(5% + 90% * random());
 }
 
 /* Add thread to balloons */
