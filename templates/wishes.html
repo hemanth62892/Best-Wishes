@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
-<body>
+<body onload="startEmojiScroll()">
 
     <div class="message-container">
         <h1>My Love,</h1>
@@ -17,6 +17,8 @@
     <div class="image-container">
         <img src="{{ url_for('static', filename='images/love.jpg') }}" alt="Valentine's Love">
     </div>
+
+    <div id="scrolling-emoji">🥰 💕 🌹</div>
 
 </body>
 </html>
