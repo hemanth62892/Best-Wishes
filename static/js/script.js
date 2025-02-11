@@ -54,7 +54,7 @@ function startEmojiScroll() {
 
     setTimeout(() => {
         window.location.href = "/quotes";
-    }, 15000);
+    }, 12000);
 }
 
 // Make the man walk and redirect to /quotes
