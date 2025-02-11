@@ -3,15 +3,15 @@ function goToBalloons() {
     window.location.href = "/balloons";
 }
 
-// Generate normal balloons with thread for 10 seconds
+// Generate full-screen balloons instantly
 function generateNormalBalloons() {
     let container = document.getElementById("balloon-container");
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) { // More balloons
         let balloon = document.createElement("div");
         balloon.classList.add("balloon");
-        balloon.style.left = Math.random() * 90 + "vw"; // Spread balloons across width
-        balloon.style.animationDuration = "10s"; // Balloons float for 10 seconds
+        balloon.style.left = Math.random() * 90 + "vw";
+        balloon.style.animationDuration = "10s";
         container.appendChild(balloon);
     }
 
