@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+    background-color: pink;
+}
+
+.curtain {
+    background: red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    font-size: 24px;
+    color: white;
+    background: pink;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#balloon-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+}
+
+.man {
+    width: 50px;
+    height: 100px;
+    background: url('../images/man.png') no-repeat center center/contain;
+    position: absolute;
+    animation: walk 5s linear forwards;
+}
+
+@keyframes walk {
+    from { right: -100px; }
+    to { left: 100%; }
+}
+
+.stethoscope {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
