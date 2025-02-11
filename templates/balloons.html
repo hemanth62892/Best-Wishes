@@ -1,1 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Balloons</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body onload="showMessage()">
+    <div id="balloon-container">
+        <div class="balloon"></div>
+    </div>
+    <h1 id="valentine-message">Happy Valentine's Day, My Love ❤️</h1>
+    <audio autoplay>
+        <source src="{{ url_for('static', filename='sounds/valentine_music.mp3') }}" type="audio/mp3">
+    </audio>
+</body>
+</html>
 
