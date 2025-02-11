@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishes</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body onload="startScene()">
-    <div id="balloon-container"></div>
-    <h1 id="wishes-message">Wishing You All the Happiness! ❤️</h1>
-    <div id="man-container">
-        <div class="man">
-            <img src="{{ url_for('static', filename='images/man_with_heart_balloon.png') }}" alt="Man">
-        </div>
-    </div>
-    <audio autoplay>
-        <source src="{{ url_for('static', filename='sounds/heart_bear.mp3') }}" type="audio/mp3">
-    </audio>
+
+    <div id="heart-balloon-container"></div>
+
+    <div id="man-container">🚶‍♂️</div>
+
 </body>
 </html>
