@@ -1,6 +1,6 @@
 /* ---- BACKGROUND STYLES ---- */
 body {
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Gradient Background */
     height: 100vh;
     margin: 0;
     display: flex;
@@ -9,30 +9,21 @@ body {
     flex-direction: column;
 }
 
-/* ---- HOME PAGE (Heart Shape) ---- */
+/* ---- HOME PAGE (Click Here Text Above Heart) ---- */
 .click-text {
     font-size: 24px;
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
-}
-/* ---- HOME PAGE (Pink Background & Red Heart) ---- */
-body {
-    background-color: pink; /* Keep the background pink */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
-/* Heart shape - Now filled with RED */
+/* ---- HOME PAGE (Heart Shape with Red Fill) ---- */
 .heart-shape {
     position: relative;
     width: 120px;
     height: 120px;
-    background: red; /* Heart is now RED */
+    background: red; /* Heart is RED */
     transform: rotate(-45deg);
     cursor: pointer;
     display: flex;
@@ -60,17 +51,14 @@ body {
     top: 0;
 }
 
-/* Click Here text inside the heart */
-.heart-shape span {
-    color: white; /* Text color inside the heart */
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    transform: rotate(45deg);
+/* ---- BALLOONS PAGE (Big Normal Balloons with Threads) ---- */
+#balloon-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-
-/* ---- BALLOONS PAGE (Normal Balloons with Thread) ---- */
 @keyframes float {
     0% { transform: translateY(100vh); opacity: 1; }
     100% { transform: translateY(-10vh); opacity: 0; }
@@ -78,8 +66,8 @@ body {
 
 .balloon {
     position: absolute;
-    width: 40px;
-    height: 50px;
+    width: 80px; /* Bigger Balloons */
+    height: 100px;
     background: red;
     border-radius: 50%;
     animation: float 10s linear infinite;
@@ -96,17 +84,38 @@ body {
     bottom: -60px;
 }
 
-/* Valentine's text */
+/* Valentine's text on Balloons Page */
 .valentine-text {
     position: absolute;
     top: 40%;
     width: 100%;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: white;
 }
-/* ---- WISHES PAGE (Scrolling Emoji Appears Only Here) ---- */
+
+/* ---- WISHES PAGE (Message & Random Image) ---- */
+.message-container {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 22px;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ---- WISHES PAGE (Scrolling Emoji - Fixed to Appear Only Here) ---- */
 @keyframes scroll-emoji {
     0% { left: -100px; }
     100% { left: 100vw; }
@@ -121,7 +130,7 @@ body {
     white-space: nowrap;
 }
 
-/* ---- WISHES PAGE (Man Walking) ---- */
+/* ---- WISHES PAGE (Man Walking Across the Screen) ---- */
 @keyframes walk {
     0% { left: -50px; }
     100% { left: 100vw; }
@@ -132,4 +141,5 @@ body {
     bottom: 20px;
     left: -50px;
     font-size: 40px;
+    animation: walk 5s linear forwards;
 }
