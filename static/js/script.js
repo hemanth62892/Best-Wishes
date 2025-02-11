@@ -69,3 +69,21 @@ function startScene() {
         }, 5000);
     }, 3000);
 }
+
+// Function to play audio based on the current page
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.createElement("audio");
+    audio.autoplay = true;
+    audio.loop = true; // Loop the background music
+
+    if (window.location.pathname === "/balloons") {
+        audio.src = "/static/heartbeat.mp3"; // Play heartbeat.mp3 on /balloons
+    } else if (window.location.pathname === "/wishes") {
+        audio.src = "/static/music1.mp3"; // Play music1.mp3 on /wishes
+    } else if (window.location.pathname === "/quotes") {
+        audio.src = "/static/music2.mp3"; // Play music2.mp3 on /quotes
+    }
+
+    document.body.appendChild(audio); // Add the audio element to the page
+});
+
