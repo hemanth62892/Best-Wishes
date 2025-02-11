@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
-<body onload="startScene()">
+<body>
 
-    <div id="balloon-container"></div>
+    <div class="message-container">
+        <h1>My Love,</h1>
+        <p>You make my world brighter, my days happier, and my heart fuller. Happy Valentine's Day! 💖</p>
+    </div>
 
-    <div id="scrolling-emoji">🎈✨💖</div> <!-- Emoji appears here only -->
-
-    <div id="man-container">🚶‍♂️</div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/love.jpg') }}" alt="Valentine's Love">
+    </div>
 
 </body>
 </html>
