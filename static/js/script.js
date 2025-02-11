@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname === "/wishes") {
         let emojiContainer = document.getElementById("scrolling-emoji");
         if (!emojiContainer) {
-            emojiContainer = document.createElement("div");
+            emojiContainer = document.createElement("img");
             emojiContainer.id = "scrolling-emoji";
-            emojiContainer.innerHTML = "🎈✨💖"; // Change emojis here
+            emojiContainer.src = "/static/emoji.png"; // Use emoji image
+            emojiContainer.alt = "Scrolling Emoji";
             document.body.appendChild(emojiContainer);
         }
 
