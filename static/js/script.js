@@ -19,3 +19,13 @@ function generateHeartBalloons() {
     }, 7000);
 }
 
+function startScene() {
+    generateBalloons();
+    setTimeout(() => {
+        document.getElementById("man-container").style.animation = "walk 5s linear forwards";
+        setTimeout(() => {
+            window.location.href = "/quotes";
+        }, 5000);
+    }, 3000);
+}
+
