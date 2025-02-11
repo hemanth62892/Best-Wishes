@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Scroll emoji once for 4s, then redirect to /quotes
 function startEmojiScroll() {
     let emoji = document.getElementById("scrolling-emoji");
-    emoji.style.animation = "scroll-emoji 4s linear forwards"; // Scrolls once
+    emoji.style.animation = "scroll-emoji 10s linear forwards"; // Scrolls once
 
     setTimeout(() => {
         window.location.href = "/quotes";
