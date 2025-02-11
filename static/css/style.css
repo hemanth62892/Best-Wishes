@@ -36,6 +36,17 @@ body {
     border-radius: 50%;
 }
 
+/* Valentine's text */
+.valentine-text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
 .heart-shape::before {
     top: -60px;
     left: 0;
@@ -46,7 +57,7 @@ body {
     top: 0;
 }
 
-/* ---- BALLOONS PAGE (Normal Balloons) ---- */
+/* ---- BALLOONS PAGE (Normal Balloons with Thread) ---- */
 @keyframes float {
     0% { transform: translateY(100vh); opacity: 1; }
     100% { transform: translateY(-10vh); opacity: 0; }
@@ -54,14 +65,25 @@ body {
 
 .balloon {
     position: absolute;
-    width: 30px;
+    width: 40px;
     height: 50px;
     background: red;
     border-radius: 50%;
     animation: float 10s linear infinite;
 }
 
-/* ---- WISHES PAGE (Emoji Scrolling) ---- */
+/* Add thread to balloons */
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: white;
+    left: 50%;
+    bottom: -50px;
+}
+
+/* ---- WISHES PAGE (Fixed Scrolling Emoji) ---- */
 @keyframes scroll-emoji {
     0% { left: -100px; }
     100% { left: 100vw; }
@@ -73,6 +95,7 @@ body {
     left: -100px;
     font-size: 30px;
     animation: scroll-emoji 5s linear infinite;
+    white-space: nowrap;
 }
 
 /* ---- WISHES PAGE (Man Walking) ---- */
