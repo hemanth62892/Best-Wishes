@@ -1,51 +1,52 @@
-/* ---- HOME PAGE (Heart Shape) ---- */
-.heart-shape {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: pink;
-    transform: rotate(-45deg);
-    cursor: pointer;
+/* ---- BACKGROUND STYLES ---- */
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    flex-direction: column;
 }
 
-/* Create a heart shape */
+/* ---- HOME PAGE (Heart Shape) ---- */
+.click-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heart-shape {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: pink;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
 .heart-shape::before, .heart-shape::after {
     content: "";
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background: pink;
     border-radius: 50%;
 }
 
 .heart-shape::before {
-    top: -75px;
+    top: -60px;
     left: 0;
 }
 
 .heart-shape::after {
-    left: 75px;
+    left: 60px;
     top: 0;
 }
 
-/* Ensure text is fully visible */
-.heart-text {
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    transform: rotate(45deg);
-    text-align: center;
-    width: 100px;
-}
-
-/* ---- BALLOONS PAGE (Heart Balloons) ---- */
+/* ---- BALLOONS PAGE (Normal Balloons) ---- */
 @keyframes float {
     0% { transform: translateY(100vh); opacity: 1; }
     100% { transform: translateY(-10vh); opacity: 0; }
@@ -54,31 +55,24 @@
 .balloon {
     position: absolute;
     width: 30px;
-    height: 40px;
+    height: 50px;
     background: red;
     border-radius: 50%;
-    transform: rotate(-45deg);
     animation: float 10s linear infinite;
 }
 
-/* Heart shape effect */
-.balloon::before, .balloon::after {
-    content: "";
+/* ---- WISHES PAGE (Emoji Scrolling) ---- */
+@keyframes scroll-emoji {
+    0% { left: -100px; }
+    100% { left: 100vw; }
+}
+
+#scrolling-emoji {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background: red;
-    border-radius: 50%;
-}
-
-.balloon::before {
-    top: -15px;
-    left: 0;
-}
-
-.balloon::after {
-    left: 15px;
-    top: 0;
+    bottom: 50px;
+    left: -100px;
+    font-size: 30px;
+    animation: scroll-emoji 5s linear infinite;
 }
 
 /* ---- WISHES PAGE (Man Walking) ---- */
