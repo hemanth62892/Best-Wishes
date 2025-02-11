@@ -3,9 +3,9 @@ function goToBalloons() {
     window.location.href = "/balloons";
 }
 
-// Generate heart-shaped balloons that float for 10 seconds
-function generateHeartBalloons() {
-    let container = document.getElementById("heart-balloon-container");
+// Generate normal balloons (no heart shape)
+function generateNormalBalloons() {
+    let container = document.getElementById("balloon-container");
 
     for (let i = 0; i < 20; i++) {
         let balloon = document.createElement("div");
@@ -22,7 +22,7 @@ function generateHeartBalloons() {
 
 // Make the man walk and redirect to /quotes
 function startScene() {
-    generateHeartBalloons();
+    generateNormalBalloons();
     setTimeout(() => {
         let man = document.getElementById("man-container");
         man.style.animation = "walk 5s linear forwards";
