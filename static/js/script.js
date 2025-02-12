@@ -87,29 +87,39 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(audio); // Add the audio element to the page
 });
 
+// 🌟 Function to Generate Floating Hearts (Continuous & Bigger)
 function generateHearts() {
-    let container = document.getElementById("floating-hearts");
+    let container = document.createElement("div");  
+    container.id = "floating-hearts";
+    document.body.appendChild(container);
 
     setInterval(() => {
         let heart = document.createElement("div");
         heart.innerHTML = "❤️";
         heart.classList.add("heart");
-        
-        // Random horizontal position (between 0% to 100% viewport width)
+
+        // Random left position (spread across the screen)
         heart.style.left = Math.random() * 100 + "vw";
-        
-        // Random animation duration (between 5s to 10s for variety)
-        heart.style.animationDuration = (5 + Math.random() * 5) + "s";
-        
+
+        // Random animation duration (slower for a smoother effect)
+        heart.style.animationDuration = (8 + Math.random() * 5) + "s";
+
+        // Slightly random size variation
+        let randomSize = 35 + Math.random() * 20; // Between 35px - 55px
+        heart.style.fontSize = randomSize + "px";
+
         container.appendChild(heart);
 
-        // Remove heart after animation completes
+        // Remove after animation completes
         setTimeout(() => {
             heart.remove();
-        }, 10000);
+        }, 13000); // Slightly longer to avoid abrupt removal
 
-    }, 500); // Generates a new heart every 0.5 seconds
+    }, 300); // More frequent heart generation (every 0.3 seconds)
 }
 
-// Start generating hearts when page loads
-document.addEventListener("DOMContentLoaded", generateHearts);
+// 🌟 Call the function on every page
+document.addEventListener("DOMContentLoaded", function () {
+    generateHearts();
+});
+
