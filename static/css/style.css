@@ -105,6 +105,16 @@ body {
     color: white;
 }
 
+.valentine-text1 {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
 /* ---- WISHES PAGE (Message & Random Image) ---- */
 .message-container {
     text-align: center;
