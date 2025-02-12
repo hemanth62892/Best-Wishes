@@ -164,11 +164,22 @@ body {
     animation: walk 5s linear forwards;
 }
 
-.quote-container {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 22px;
-    color: white;
+/* ---- QUOTES PAGE BACKGROUND IMAGE ---- */
+.quotes-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Fallback color */
+}
+
+/* Image Styling */
+.image-container img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover; /* Ensures the image covers the area properly */
+}
+
 }
 
 /* ---- Floating Hearts Animation ---- */
