@@ -6,6 +6,25 @@
     <title>Balloons</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <style>
+        /* Ensures spacing between text */
+        .valentine-text {
+            text-align: center;
+            display: block;
+        }
+
+        h1.valentine-text {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        p.valentine-text {
+            font-size: 1.2em;
+            line-height: 1.6; /* Increases spacing between lines */
+            margin-top: 20px; /* Space above the paragraph */
+        }
+    </style>
 </head>
 <body onload="generateNormalBalloons()">
 
