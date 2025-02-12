@@ -171,15 +171,17 @@ body {
     color: white;
 }
 
+/* ---- Floating Hearts Animation ---- */
 @keyframes floatHearts {
-    0% { transform: translateY(100vh); opacity: 1; } /* Start from bottom */
-    100% { transform: translateY(-10vh); opacity: 0; } /* Move up and fade */
+    0% { transform: translateY(100vh) scale(0.8); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
 }
 
 .heart {
     position: absolute;
-    font-size: 30px; /* Size of hearts */
-    color: #8B0000;
-    animation: floatHearts 8s linear infinite;
-    pointer-events: none; /* Prevents blocking clicks & text selection */
+    font-size: 40px; /* Increased size */
+    color: #8B0000; /* Dark Red Color */
+    animation: floatHearts 10s linear infinite;
+    pointer-events: none; /* Prevents blocking interactions */
 }
+
