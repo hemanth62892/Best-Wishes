@@ -105,7 +105,7 @@ function generateHearts() {
         heart.style.animationDuration = (8 + Math.random() * 5) + "s";
 
         // Slightly random size variation
-        let randomSize = 35 + Math.random() * 20; // Between 35px - 55px
+        let randomSize = 45 + Math.random() * 20; // Between 45px - 65px
         heart.style.fontSize = randomSize + "px";
 
         container.appendChild(heart);
@@ -122,4 +122,3 @@ function generateHearts() {
 document.addEventListener("DOMContentLoaded", function () {
     generateHearts();
 });
-
