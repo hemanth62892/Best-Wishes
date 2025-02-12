@@ -179,7 +179,7 @@ body {
 .heart {
     position: absolute;
     font-size: 30px; /* Size of hearts */
-    color: red;
+    color: #8B0000;
     animation: floatHearts 8s linear infinite;
     pointer-events: none; /* Prevents blocking clicks & text selection */
 }
