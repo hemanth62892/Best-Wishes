@@ -170,3 +170,16 @@ body {
     font-size: 22px;
     color: white;
 }
+
+@keyframes floatHearts {
+    0% { transform: translateY(100vh); opacity: 1; } /* Start from bottom */
+    100% { transform: translateY(-10vh); opacity: 0; } /* Move up and fade */
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px; /* Size of hearts */
+    color: red;
+    animation: floatHearts 8s linear infinite;
+    pointer-events: none; /* Prevents blocking clicks & text selection */
+}
